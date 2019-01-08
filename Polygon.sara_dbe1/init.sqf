@@ -1,0 +1,2 @@
+nopop=false;
+publicVariable "nopop";
