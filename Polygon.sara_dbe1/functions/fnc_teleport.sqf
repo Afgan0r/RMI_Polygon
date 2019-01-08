@@ -13,5 +13,3 @@ Tp addaction ["Телепорт к стрелковому и танковому 
 {
     player setpos (getPos tp3);
 }];
-
-//ss
