@@ -1,9 +1,6 @@
-kh1_refresh addAction ["Обновить цели",
+params ["_center","_dist"];
+_targets = nearestObjects [position _center, ["TargetBase"], _dist];
 {
-    _targets = nearestObjects [position center1, ["TargetBase"], 50];
-    {
-        _x setVariable ["BIS_poppingEnabled", true];
-        _x animate ["Terc",0];
-    } forEach _targets;
-}
-];
+    _x setVariable ["BIS_poppingEnabled", true];
+    _x animate ["Terc",0];
+} forEach _targets;
