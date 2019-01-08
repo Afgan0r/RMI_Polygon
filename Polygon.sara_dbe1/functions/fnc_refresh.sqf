@@ -7,7 +7,3 @@ kh1_refresh addAction ["Обновить цели",
     } forEach _targets;
 }
 ];
-
-//lol
-
-//ыфыва
