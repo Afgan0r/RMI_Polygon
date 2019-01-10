@@ -1,2 +1,1 @@
-nopop=false;
-publicVariable "nopop";
+nopop=true;

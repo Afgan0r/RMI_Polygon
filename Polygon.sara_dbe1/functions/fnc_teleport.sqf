@@ -40,4 +40,10 @@
         _d = direction Tp_5 + 180;
         player setdir _d;
     }];
-} forEach [Tp_0,Tp_1,Tp_2,Tp_3,Tp_4,Tp_5];
+    _x addaction ["Телепорт к стрельбищу на дальние дистанции",
+    {
+        player setpos (getPos tp6);
+        _d = direction Tp_6 + 180;
+        player setdir _d;
+    }];
+} forEach [Tp_0,Tp_1,Tp_2,Tp_3,Tp_4,Tp_5,Tp_6];
