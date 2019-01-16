@@ -1,9 +1,24 @@
-ish_stage1_trg1_hit=0;
-ish_stage1_trg1 addeventhandler ["HIT",{ish_stage1_trg1_hit=1;}];
+params ["_name"];
 
+//refresh targets
+
+execVM "functions\fnc_isr_n_refresh.sqf";
+
+//enable timer
+
+timer_on=true;
+publicVariable "timer_on";
+[_name] execVM "functions\fnc_timer.sqf";
 
 //first stage
 
+ish_stage1_trg1_hit=0;
+publicVariable "ish_stage1_trg1_hit";
+ish_stage1_trg1 addeventhandler ["HIT",
+{
+    ish_stage1_trg1_hit=1;
+    publicVariable "ish_stage1_trg1_hit";
+}];
 sleep 3;
 hint "Ляжь на коврик и порази мишень";
 waitUntil {ish_stage1_trg1_hit==1};
@@ -16,11 +31,14 @@ hint "Подойди к огневому рубежу";
 //second stage
 
 ish_stage2_trg1_hit=0;
+publicVariable "ish_stage2_trg1_hit";
 ish_stage2_trg2_hit=0;
+publicVariable "ish_stage2_trg2_hit";
 ish_stage2_trg1 addeventhandler ["HIT",
 {
     ish_stage2_trg1_hit=ish_stage2_trg1_hit+1;
-    hint format ["ish_stage2_trg1_hit=%1",ish_stage2_trg1_hit];
+    publicVariable "ish_stage2_trg1_hit";
+    hint format ["in EH ish_stage2_trg1_hit=%1",ish_stage2_trg1_hit];
     if (ish_stage2_trg1_hit<2) then
     {
         [ish_stage2_trg1,2] execVM "functions\fnc_isr_popup.sqf";
@@ -29,7 +47,8 @@ ish_stage2_trg1 addeventhandler ["HIT",
 ish_stage2_trg2 addeventhandler ["HIT",
 {
     ish_stage2_trg2_hit=ish_stage2_trg2_hit+1;
-    hint format ["ish_stage2_trg2_hit=%1",ish_stage2_trg2_hit];
+    publicVariable "ish_stage2_trg2_hit";
+    hint format ["in EH ish_stage2_trg2_hit=%1",ish_stage2_trg2_hit];
     if (ish_stage2_trg2_hit<2) then
     {
         [ish_stage2_trg2,2] execVM "functions\fnc_isr_popup.sqf";
@@ -41,13 +60,27 @@ waitUntil {(ish_stage2_trg2_hit==2) and (ish_stage2_trg1_hit==2)};
 ish_stage2_trg1 removeEventHandler ["HIT",0];
 ish_stage2_trg2 removeEventHandler ["HIT",0];
 hint "Подойди к следующему огневому рубежу";
+sleep 1;
+hint format ["out of EH ish_stage2_trg1_hit=%1",ish_stage2_trg2_hit];
+sleep 2;
+hint format ["out of EH ish_stage2_trg2_hit=%1",ish_stage2_trg2_hit];
 
 //third stage
 
 ish_stage3_trg1_hit=0;
-ish_stage3_trg1 addEventHandler ["Explosion", {ish_stage3_trg1_hit=1}];
 ish_stage3_trg2_hit=0;
-ish_stage3_trg2 addEventHandler ["Explosion", {ish_stage3_trg2_hit=1}];
+publicVariable "ish_stage3_trg1_hit";
+publicVariable "ish_stage3_trg2_hit";
+ish_stage3_trg1 addEventHandler ["Explosion",
+{
+    ish_stage3_trg1_hit=1;
+    publicVariable "ish_stage3_trg1_hit";
+}];
+ish_stage3_trg2 addEventHandler ["Explosion",
+{
+    ish_stage3_trg2_hit=1;
+    publicVariable "ish_stage3_trg2_hit";
+}];
 waitUntil {triggerActivated ish_stage3_trigger1};
 hint "Забрось гранату в указанное окно";
 waitUntil {(ish_stage3_trg1_hit==1)||(ish_stage3_trg2_hit==1)};
@@ -61,15 +94,19 @@ waitUntil {triggerActivated ish_stage3_trigger2};
 
 hint "Порази на ходу каждую мишень 1 раз, останавливаться нельзя";
 ish_stage5_hits=0;
+publicVariable "ish_stage5_hits";
 {
     _x addEventHandler ["HIT",
     {
         ish_stage5_hits=ish_stage5_hits+1;
+        publicVariable "ish_stage5_hits";
     }];
 } foreach [ish_stage4_trg1,ish_stage4_trg2,ish_stage4_trg3,ish_stage4_trg4,ish_stage4_trg5];
 waitUntil {ish_stage5_hits==5};
 {
     _x removeEventHandler ["HIT",0];
 } foreach [ish_stage4_trg1,ish_stage4_trg2,ish_stage4_trg3,ish_stage4_trg4,ish_stage4_trg5];
-hint "Отличная работа, на этом все. Подойди к ноутбуку чтобы прибраться за собой.";
+hint "Отличная работа, на этом все. Подойди к ноутбуку чтобы вернуть обратно.";
+timer_on=false;
+publicVariable "timer_on";
 exit;
