@@ -1,0 +1,227 @@
+enableDebugConsole = 2;
+
+class RscPicture 
+{ 
+	access=0;
+    type=0;
+    idc=-1;
+    style=48;
+    colorBackground[]={0,0,0,0};
+    colorText[]={1,1,1,1};
+    font="TahomaB";
+    sizeEx=0;
+    lineSpacing=0;
+    text="";
+    shadow = 0;
+}; 
+
+class RscTitles 
+{ 
+	class Screamer1 
+	{ 
+	idd = -1; 
+	movingEnable = 0; 
+	duration = 4;
+	fadein = 0;	
+	name = "Screamer1"; 
+	controls[] = {"logo_0"}; 
+		class logo_0: RscPicture 
+		{ 
+			type = 0; 
+			idc = -1; 
+			style = 48; 
+			colorBackground[] = {1, 1, 1, 1}; 
+			colorText[] = {1, 1, 1, 1}; 
+			//x = 0.05 * safezoneW + safezoneX; 
+			//y = 0.15 * safezoneH + safezoneY; 
+			//w = 0.912077 * safezoneW; 
+			//h = 0.710 * safezoneH; 
+			x = safezoneX;
+			y = safezoneY;
+			w = safezoneW;
+			h = safezoneH;
+			sizeEx = 0; 
+			lineSpacing = 0; 
+			access = ReadAndWrite;
+			text = "images\screamer_image_1.jpg"; 
+		}; 
+	}; 
+
+	class Screamer2 
+	{ 
+	idd = -1; 
+	movingEnable = 0; 
+	duration = 4;
+	fadein = 0;	
+	name = "Screamer2"; 
+	controls[] = {"logo_0"}; 
+		class logo_0: RscPicture 
+		{ 
+			type = 0; 
+			idc = -1; 
+			style = 48; 
+			colorBackground[] = {1, 1, 1, 1}; 
+			colorText[] = {1, 1, 1, 1}; 
+			//x = 0.05 * safezoneW + safezoneX; 
+			//y = 0.15 * safezoneH + safezoneY; 
+			//w = 0.912077 * safezoneW; 
+			//h = 0.710 * safezoneH; 
+			x = safezoneX;
+			y = safezoneY;
+			w = safezoneW;
+			h = safezoneH;
+			sizeEx = 0; 
+			lineSpacing = 0; 
+			access = ReadAndWrite;
+			text = "images\screamer_image_2.jpg"; 
+		}; 
+	}; 
+
+	class Screamer3 
+	{ 
+	idd = -1; 
+	movingEnable = 0; 
+	duration = 4;
+	fadein = 0;	
+	name = "Screamer3"; 
+	controls[] = {"logo_0"}; 
+		class logo_0: RscPicture 
+		{ 
+			type = 0; 
+			idc = -1; 
+			style = 48; 
+			colorBackground[] = {1, 1, 1, 1}; 
+			colorText[] = {1, 1, 1, 1}; 
+			//x = 0.05 * safezoneW + safezoneX; 
+			//y = 0.15 * safezoneH + safezoneY; 
+			//w = 0.912077 * safezoneW; 
+			//h = 0.710 * safezoneH; 
+			x = safezoneX;
+			y = safezoneY;
+			w = safezoneW;
+			h = safezoneH;
+			sizeEx = 0; 
+			lineSpacing = 0; 
+			access = ReadAndWrite;
+			text = "images\screamer_image_3.jpg"; 
+		}; 
+	};
+
+	class Screamer4 
+	{ 
+	idd = -1; 
+	movingEnable = 0; 
+	duration = 4;
+	fadein = 0;	
+	name = "Screamer4"; 
+	controls[] = {"logo_0"}; 
+		class logo_0: RscPicture 
+		{ 
+			type = 0; 
+			idc = -1; 
+			style = 48; 
+			colorBackground[] = {1, 1, 1, 1}; 
+			colorText[] = {1, 1, 1, 1}; 
+			//x = 0.05 * safezoneW + safezoneX; 
+			//y = 0.15 * safezoneH + safezoneY; 
+			//w = 0.912077 * safezoneW; 
+			//h = 0.710 * safezoneH; 
+			x = safezoneX;
+			y = safezoneY;
+			w = safezoneW;
+			h = safezoneH;
+			sizeEx = 0; 
+			lineSpacing = 0; 
+			access = ReadAndWrite;
+			text = "images\screamer_image_4.jpg"; 
+		}; 
+	}; 
+
+	class Screamer5 
+	{ 
+	idd = -1; 
+	movingEnable = 0; 
+	duration = 4;
+	fadein = 0;	
+	name = "Screamer5"; 
+	controls[] = {"logo_0"}; 
+		class logo_0: RscPicture 
+		{ 
+			type = 0; 
+			idc = -1; 
+			style = 48; 
+			colorBackground[] = {1, 1, 1, 1}; 
+			colorText[] = {1, 1, 1, 1}; 
+			//x = 0.05 * safezoneW + safezoneX; 
+			//y = 0.15 * safezoneH + safezoneY; 
+			//w = 0.912077 * safezoneW; 
+			//h = 0.710 * safezoneH; 
+			x = safezoneX;
+			y = safezoneY;
+			w = safezoneW;
+			h = safezoneH;
+			sizeEx = 0; 
+			lineSpacing = 0; 
+			access = ReadAndWrite;
+			text = "images\screamer_image_5.jpg"; 
+		}; 
+	}; 
+}; 
+
+class CfgSounds
+{
+	class screamer_sound1
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "screamer_sound1";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = {"sounds\screamer_sound_1.ogg", 2, 1};
+
+		titles[] = {1, ""};
+	};
+
+	class screamer_sound2
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "screamer_sound2";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = {"sounds\screamer_sound_2.ogg", 2, 1};
+
+		titles[] = {1, ""};
+	};
+
+	class screamer_sound3
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "screamer_sound3";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = {"sounds\screamer_sound_3.ogg", 2, 1};
+
+		titles[] = {1, ""};
+	};
+
+	class screamer_sound4
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "screamer_sound4";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = {"sounds\screamer_sound_4.ogg", 2, 1};
+
+		titles[] = {1, ""};
+	};
+
+	class screamer_sound5
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "screamer_sound5";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = {"sounds\screamer_sound_5.ogg", 2, 1};
+
+		titles[] = {1, ""};
+	};
+};

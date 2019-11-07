@@ -27,7 +27,7 @@
         player setdir _d;
     }];
 
-    _x addaction ["Телепорт к лесному пехотному полигону (Не завершен)",
+    _x addaction ["Телепорт к снайперскому полигону",
     {
         player setpos (getPos tp4);
         _d = direction Tp_4 + 180;
