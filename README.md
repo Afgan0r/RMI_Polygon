@@ -5,23 +5,13 @@ https://vk.com/russianmilitaryintelligence
 ### Карта: United Sahrani
 ----------
 ### Требования:
-1) CUP Terrains Core
-https://steamcommunity.com/sharedfiles/filedetails/?i..
-2) CUP Terrains Maps
-https://steamcommunity.com/sharedfiles/filedetails/?i..
-3) RHS AFRF
-https://steamcommunity.com/workshop/filedetails/?id=8..
-4) RHS USAF
-5) RHS GREF
-6) RHS SAF
-7) RMZ (Russian Military Zeus)
-https://steamcommunity.com/sharedfiles/filedetails/?i..
-8) **Wolfram Modern Combat**
-https://steamcommunity.com/sharedfiles/filedetails/?i..
-9) **Wolfram Maps**
-https://steamcommunity.com/sharedfiles/filedetails/?i..
-10) (Необязательно) **Wolfram EFFECTS**
-https://steamcommunity.com/sharedfiles/filedetails/?i..
+1) [CUP Terrains Core](https://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+2) [CUP Terrains Maps](https://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+3) [RHS AFRF, USAF, GREF, SAF](https://steamcommunity.com/workshop/filedetails/?id=843770737)
+4) [RMZ (Russian Military Zeus)](https://steamcommunity.com/sharedfiles/filedetails/?id=1427986657)
+5) [**Wolfram Modern Combat**](https://steamcommunity.com/sharedfiles/filedetails/?id=1459418390)
+6) [**Wolfram Maps**](https://steamcommunity.com/sharedfiles/filedetails/?id=1222404018)
+7) (Необязательно) [**Wolfram EFFECTS**](https://steamcommunity.com/sharedfiles/filedetails/?id=1222449579)
 
 Для того чтобы увидеть выделенные моды вам нужно добавить в стиме Kpoji4er-а, его профиль вы можете найти здесь https://steamcommunity.com/id/Kpoji4er/
 
